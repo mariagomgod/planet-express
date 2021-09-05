@@ -1,0 +1,143 @@
+@import styles/_variables
+
+body
+  background-color: $primary
+
+.App
+  text-align: center
+  background-color: $octonary
+
+header, footer
+    text-align: center
+    width: 100%
+    clear: both
+    padding: 2vw 0
+
+    .navbar
+       margin: auto
+       font-weight: bold
+       color: $primary 
+    
+       ul
+           list-style: none
+           display: inline-block
+           padding: 0
+           margin: 0
+
+           li
+               display: inline
+               margin: 0 0.5vw
+               
+            
+           :first-child
+               margin-left: 0
+
+       #copyright
+           margin-left: 1vw
+           display: inline-block
+           margin-right: 3vw
+
+header
+  height: 100px
+  padding: 0 3vw
+
+  img#logo
+    height: 90px
+    float: left
+    position: relative
+    top: 5px
+  
+  nav.navbar
+    line-height: 100px
+    float: left
+
+    li.nav-item
+      margin-left: 3.5vw
+      font-size: 20px
+
+div.overlay
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+    > div
+        color: $primary
+
+        &:nth-of-type(1)
+            display: none
+       
+        &:nth-of-type(2)
+            top: 50%
+            max-width: 581px
+            border-radius: 10px
+
+            form
+                h3
+                  margin: 0 auto
+
+                .control-group
+                  margin-top: 1vw
+
+                  input[type=text], input[type=number]
+                    width: 50%
+                    border-radius: 5px
+                    border-width: 1.5px
+
+                  input[type=checkbox]
+                    margin-top: 5px
+
+                  &.checkbox
+                    display: grid
+                    grid-template: 1fr / 25px 1fr
+                    text-align: justify
+
+                button
+                  background-color: $octonary
+                  color: $primary
+                  padding: 0.5vw
+                  border-radius: 10px
+                  margin-top: 0
+
+            .modal-message
+              margin-bottom: 0
+
+#content
+  clear: both
+  display: grid
+  grid-template: 1fr / 3.5fr 1fr
+
+svg[class^='fa-w-'], svg[class*=' fa-w-'] //para todas las imágenes que contengan una clase que empiece por fa-w- (iconos de fontawesome)
+  font-size: 25px
+  margin: 0 0.5vw
+
+.invisible
+  visibility: hidden
+
+.overlay-button
+    padding: 1vw
+    border-radius: 10px
+    color: $primary
+    background-color: $octonary
+    font-weight: bold
+
+aside
+  border-left: 3px double $primary
+  padding: 3vw 1vw 0 1vw
+  background-color: $tertiary
+
+@media all and ( max-width: 960px )
+    .navbar
+        ul
+            padding-left: 0
+
+        #copyright
+          display: block
+          margin-top: 0
+
+@media all and ( max-width: 720px )
+
+    body
+      font-size: 75% !important
+
+    aside
+      display: none
