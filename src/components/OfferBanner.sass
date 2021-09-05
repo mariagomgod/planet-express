@@ -1,20 +1,33 @@
 @import ../styles/_variables
 
 div#offer
-    background-color: $secondary
-    color: $septenary
-    height: max-content
-    padding: 1vw 0
+  background-color: $secondary
+  color: $septenary
+  height: max-content
+  padding: 1vw 1.5vw
+  display: flex
+  justify-content: center
+  align-items: center
 
-    #offer-description
-         font-size: x-large
-         font-weight: 700
+  #offer-description
+    font-size: 1.8vw
+    font-weight: 700
 
-         p
-           margin: 0
+    p
+      margin: 0
 
+  #calculator-widget
+    float: right
+    position: absolute
+    right: 1.5vw
+
+    .overlay-button
+      font-size: 1.7vw
+
+@media all and ( max-width: 640px )
+  div#offer
+    display: block
+    
     #calculator-widget
-        float: right
-        position: absolute
-        top: 5%
-        right: 4%
+      float: none
+      position: unset

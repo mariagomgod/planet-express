@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Modal } from 'react-modal-overlay'
- 
+import './Newsletter.sass';
+
 export default function Newsletter() {
 
   const [isOpen, setIsOpen] = useState(false);

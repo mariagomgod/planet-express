@@ -1,14 +1,67 @@
 @import ../styles/_variables
 
 header
-    color: $primary
-    display: flex
-    justify-content: center
-    align-items: center
+  height: 100px
+  padding: 1.5vw
+  color: $primary
+  display: flex
+  justify-content: center
+  align-items: center
 
-    nav.navbar ul li.nav-item a.nav-link
-      text-decoration: none
-      color: $primary
+  img#logo
+    height: 90px
+    float: left
+    position: relative
 
-      &:hover
-        color: $senary
+  nav.navbar
+    line-height: 100px
+    float: left
+
+    ul li.nav-item
+      margin-left: 3.5vw
+     
+      a.nav-link
+        color: $primary
+
+@media all and ( max-width: 1200px )
+  header
+    .overlay-button
+      width: 200px
+
+@media all and ( max-width: 900px )
+  header
+    .overlay-button
+      width: 130px
+
+@media all and ( max-width: 760px )
+  header
+    height: 60px
+    padding: 0 1.5vw
+
+    img#logo
+      height: 60px
+      top: 0
+
+    nav.navbar
+      line-height: 60px
+
+      ul li.nav-item
+        margin-left: 1vw
+
+@media all and ( max-width: 640px )
+  header .overlay-button
+    width: 100px
+
+@media all and ( max-width: 480px )
+  header
+    height: 40px
+
+    img#logo
+      height: 40px
+      top: 0
+
+    nav.navbar
+      line-height: 40px
+    
+    .overlay-button
+      width: 60px

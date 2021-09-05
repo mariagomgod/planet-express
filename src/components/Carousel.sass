@@ -10,7 +10,6 @@
   -o-transition: background 2s
   transition: background 2s
   height: 300px
-  padding: 5vw 3vw
   text-align: left
 
   h2
@@ -18,5 +17,11 @@
     background-color: $primary
     display: inline-block
     padding: 1vw
-    position: absolute
+    position: relative
     left: 0
+    top: 1vw
+    font-size: 2vw
+  
+@media all and ( max-width: 480px )
+  #carousel
+    height: 150px

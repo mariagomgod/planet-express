@@ -1,19 +1,32 @@
 @import ../styles/_variables
 
 footer
-    background-color: $primary
+  background-color: $primary
+  color: $septenary
+  padding: 0.5vw
+  font-size: 1.7vw
+
+  nav.navbar ul li.nav-item a.nav-link
     color: $septenary
-    padding: 0.5vw
+    font-size: 1.7vw
+ 
+  p
+    color: $septenary
 
-    nav.navbar ul li.nav-item a.nav-link
-      text-decoration: none
-      color: $septenary
-
-      &:hover
-        color: $senary
-
-    nav.navbar ul, p
-      color: $septenary
-
-    p#copyright
+    &#copyright
       color: $secondary
+      margin-left: 1vw
+      margin-right: 3vw
+      display: inline-block
+
+    svg[class^='fa-w-'], svg[class*=' fa-w-'] //para todas las imágenes que contengan una clase que empiece por fa-w- (iconos de fontawesome)
+      font-size: 1.8vw
+      margin: 0 0.5vw
+
+@media all and ( max-width: 720px )
+  footer
+    #copyright
+      display: block
+
+    p
+      margin: 1.5vw 0

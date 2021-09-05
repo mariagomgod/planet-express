@@ -25,8 +25,9 @@ export default function ShippingCostCalculator() {
           hideComputationResult(); // ocultamos el mensaje de éxito
           setPackageWeight(0); // vaciamos el peso de los paquetes
           setNumberOfPackages(0); // vaciamos el número de paquetes
+          document.getElementById("shippingCostsForm").reset(); // vaciamos el formulario
     }}>
-        <form onSubmit={handleSubmit}>
+        <form id="shippingCostsForm" onSubmit={handleSubmit}>
             <h3>Calcula el importe de tu envío</h3>
             <div className="control-group">
                 <input type="number" className="form-control" id="numberOfPackages" placeholder="Introduce el número de paquetes" min="1" required
